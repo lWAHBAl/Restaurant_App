@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mealsFragment2">
+
+    <fragment
+        android:id="@+id/mealsFragment2"
+        android:name="com.example.restaurant_app.MealsFragment"
+        android:label="MealsFragment" >
+        <action
+            android:id="@+id/action_mealsFragment2_to_mealDetailsFragment"
+            app:destination="@id/mealDetailsFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment2"
+        android:name="com.example.restaurant_app.CartFragment"
+        android:label="CartFragment" >
+        <action
+            android:id="@+id/action_cartFragment2_to_moreMealsFragment2"
+            app:destination="@id/moreMealsFragment2" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/moreMealsFragment2"
+        android:name="com.example.restaurant_app.MoreMealsFragment"
+        android:label="MoreMealsFragment" >
+
+        <action
+            android:id="@+id/action_moreMealsFragment2_to_mealsFragment2"
+            app:destination="@id/mealsFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/mealDetailsFragment"
+        android:name="com.example.restaurant_app.MealDetailsFragment"
+        android:label="MealDetailsFragment" >
+        <argument android:name="meal"
+            app:argType="com.example.restaurant_app.Meal" />
+    </fragment>
+
+</navigation>
